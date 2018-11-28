@@ -1,0 +1,25 @@
+{
+  "eqtl_gene_cell_type": "NHEK",
+  "ld_bin_size": 1000,
+  "locus_chrom": 4,
+  "locus_start": 103475000,
+  "locus_end": 104075000,
+  "pir_start": 103545218,
+  "pir_end": 103549895,
+  "bait_start": 104005313,
+  "bait_end": 104009816,
+  "annotations": [
+    [
+      104006986,
+      "SLC9B2 (eQTL Target)"
+    ],
+    [
+      103571995,
+      "MANBA (Closest Gene to SNP)"
+    ],
+    [
+      103545219,
+      "rs17032996 (eQTL SNP)"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "locus_chrom": 14,
+    "locus_start": 88440381,
+    "locus_end": 88881268,
+    "ld_bin_size": 1000,
+    "annotations": [
+        [88470381, "rs73312867"],
+        [88481155, "GPR65"],
+        [88649113, "KCNK10"],
+        [88851268, "SPATA7"]
+    ]
+}
