@@ -47,8 +47,6 @@ cg = sns.heatmap(
     cmap = 'RdBu_r',
     center = 0,
     cbar_kws= {'label': 'log$_2$(Interacting:Non-Interacting LD Ratio)'}
-    #annot = True,
-    #fmt = '.1f'
 )
 plt.setp(cg.get_xticklabels(), rotation = 90)
 plt.setp(cg.get_yticklabels(), rotation = 0)

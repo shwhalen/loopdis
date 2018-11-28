@@ -100,12 +100,12 @@ print(
     .describe()
 )
 
-# distances = Parallel(8)(
-#     delayed(permute_distances)(ld_blocks_df, domain_boundaries_df, _)
-#     for _ in tqdm(list(range(n_permutations)))
-# )
+distances = Parallel(8)(
+    delayed(permute_distances)(ld_blocks_df, domain_boundaries_df, _)
+    for _ in tqdm(list(range(n_permutations)))
+)
 
-# (
-#     pd.concat(distances, ignore_index = True, sort = False)
-#     .to_feather(f'output/boundary_distances-domains_to_ld_blocks-{cell_line}-{super_pop}.feather')
-# )
+(
+    pd.concat(distances, ignore_index = True, sort = False)
+    .to_feather(f'output/boundary_distances-domains_to_ld_blocks-{cell_line}-{super_pop}.feather')
+)
