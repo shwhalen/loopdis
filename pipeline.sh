@@ -9,7 +9,7 @@ cell_types="${encode_cell_types} ${blood_cell_types}"
 # generate plink data common to all scripts (~7.5hrs)
 # the majority of variants should start with 'rs', a few are submitted snps ('ss'), a handful have no id ('.')
 parallel --bar ./generate_plink_bed.sh ::: ${chroms} ::: ${super_pops}
-parallel --bar ./generate_ld_block.sh ::: ${chroms} ::: ${super_pops}
+parallel --bar ./generate_ld_blocks.sh ::: ${chroms} ::: ${super_pops}
 parallel --bar ./generate_ld.sh ::: ${chroms} ::: ${super_pops}
 
 # convert plink ld to binary format (~12 hrs, mostly due to sorting and dropping duplicates)
