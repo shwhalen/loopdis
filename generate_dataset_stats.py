@@ -15,7 +15,7 @@ def get_snp_pair_count(chrom, super_pop):
 
 cell_type_stats = [
     ['Hi-C', 'Lymphoblastoid cells', 'GM12878', 9, 4907147001, 9448],
-    ['Hi-C', 'Fetal lung fibroblasts', 'IMR90', 2, 1136673290, 8040],
+    ['Hi-C', 'Fetal lung fibroblasts', 'IMR-90', 2, 1136673290, 8040],
     ['Hi-C', 'Epidermal skin keratinocytes', 'NHEK', 1, 664899299, 4929],
     ['Hi-C', 'Erythroleukemia cells', 'K562', 2, 932208867, 6057],
     ['Hi-C', 'Umbilical vein endothelial cells', 'HUVEC', 1, 460393495, 3865],

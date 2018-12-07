@@ -448,7 +448,7 @@ super_pops = [
 encode_cell_types = [
     'K562',
     'GM12878',
-    'IMR90',
+    'IMR-90',
     'NHEK',
     'HUVEC'
 ]

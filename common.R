@@ -101,7 +101,7 @@ oe_columns <- c(
 encode_cell_types = c(
   'K562',
   'GM12878',
-  'IMR90',
+  'IMR-90',
   'NHEK',
   'HUVEC'
 )

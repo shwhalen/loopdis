@@ -16,7 +16,7 @@ from mpl_toolkits.axes_grid1.anchored_artists import AnchoredSizeBar
 from pathlib import Path
 
 # GR requires same font size within figure
-general_fontsize = 11
+general_fontsize = 10
 plt.rc('legend', fontsize = general_fontsize)
 plt.rc('xtick', labelsize = general_fontsize)
 plt.rc('ytick', labelsize = general_fontsize)
@@ -176,7 +176,7 @@ scalebar_size = 100 if locus_size_kb < 5e3 else 1000
 scalebar = AnchoredSizeBar(
     transform = main_ax.transData,
     size = scalebar_size,
-    label = f'Scale: {scalebar_size}Kb',
+    label = f'Scale: {scalebar_size} kb',
     loc = 'upper right',
     borderpad = 1,
     pad = 0.1,

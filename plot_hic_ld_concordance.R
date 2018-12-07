@@ -3,6 +3,7 @@
 library(dplyr)
 library(feather)
 library(ggplot2)
+library(stringr)
 
 source('common.R')
 
@@ -15,7 +16,8 @@ stats_df <-
   do.call(rbind, lapply(fns, read_feather)) %>%
   mutate(
     window_size = factor(window_size * 5), # convert bin count to kb
-    cell_type = factor(cell_type, levels = c('K562', 'GM12878', 'IMR90', 'NHEK', 'HUVEC')),
+    cell_type = str_replace(cell_type, 'IMR90', 'IMR-90'),
+    cell_type = factor(cell_type, levels = c('K562', 'GM12878', 'IMR-90', 'NHEK', 'HUVEC')),
     super_pop = factor(super_pop, levels = c('AFR', 'AMR', 'EAS', 'EUR', 'SAS')),
     percent_both_high = percent_both_high * 100,
     baseline = factor(baseline, levels = c(F, T), labels = c('Observed', 'Expected'))

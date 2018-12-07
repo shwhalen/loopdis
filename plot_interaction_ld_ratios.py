@@ -8,8 +8,12 @@ import seaborn as sns
 
 from common import *
 
+max_interaction_ld = feather.read_dataframe(f'{output_dir}/max_interaction_ld.feather')
+max_interaction_ld['cell_type'] = max_interaction_ld['cell_type'].str.replace('IMR90', 'IMR-90')
+print(max_interaction_ld['cell_type'].value_counts())
+
 max_interaction_ld = (
-    feather.read_dataframe(f'{output_dir}/max_interaction_ld.feather')
+    max_interaction_ld
     .groupby(['cell_type', 'super_pop', 'is_significant'])
     ['max_ld']
     .apply(np.mean)

@@ -70,7 +70,7 @@ for (current_phenotype in unique(stats_df$phenotype)) {
     ) +
     labs(
       x = 'GO Term (sorted by q-value)',
-      y = '-log10(q-value)',
+      y = expression('-' * log[10] * '(q-value)'),
       color = 'Method'
     ) +
     scale_color_brewer(palette = 'Set1') +
@@ -84,6 +84,9 @@ for (current_phenotype in unique(stats_df$phenotype)) {
       axis.text.x = element_blank()
     )
 
-  output_fn <- sprintf('output/go_stats/go_stats-%s-qvalues.pdf', current_phenotype)
-  ggsave(output_fn, width = 4.5, height = 4)
+  ggsave(
+    sprintf('output/go_stats/go_stats-%s-qvalues.pdf', current_phenotype),
+    width = 4.5,
+    height = 4
+  )
 }
